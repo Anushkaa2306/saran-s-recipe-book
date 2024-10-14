@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background:linear-gradient(-180deg,rgb(0, 0, 12) ,rgb(3, 3, 22));
+
+    perspective: 1000px;
+    animation: ground 2s infinite;
+}
+
+header {
+   
+    top: 0;
+   
+}
+
+/* Navbar */
+.navbar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    position: fixed;
+    
+   
+}
+.he{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border-right: 40px;
+}
+h3{ height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    border-top: 900px ;
+    margin-top: 150px;
+    color: rgb(3, 3, 3);
+
+}
+/* Main Section */
+.nav2 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+/* Box Styling */
+.box1, .box2, .box3, .box4 {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(1, 1, 1);
+    border: 1px solid rgba(248, 242, 242, 0.5);
+    border-radius: 25px;
+    margin: 15px;
+    position: relative; /* Added for layering effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transform-style: preserve-3d;
+   top: 80px;
+    border-bottom: 40px solid rgb(9, 9, 9);
+    color: aliceblue;
+
+}
+   
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover {
+    transform: rotateY(10deg) translateZ(20px) translateX(1px);
+    box-shadow: 0 20px 60px rgba(29, 1, 1, 0.5);
+    background-color: #333;
+    border-bottom: 43px solid rgb(20, 15, 15);
+}
+
+/* Add perspective to the images inside the boxes */
+.box1 img, .box2 img, .box3 img, .box4 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: transform 0.5s ease; 
+    transform-style: preserve-3d;
+
+}
+
+/* 3D Zooming effect on image hover */
+.box1:hover img, .box2:hover img, .box3:hover img, .box4:hover img {
+    transform: scale(0.2) translateZ(100%); /* Zoom and bring forward */
+    
+}
+.box1{
+    right: 50px;
+}
+.box3{
+    left: 50px;
+}
+
+/* Titles */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 85px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(254, 246, 246);
+    margin-top: 15px;
+    background-color:  #0e002bbf;
+    box-shadow: 0   10px 15px rgba(0, 1, 15, 0.5) ;
+    animation: text 5s infinite;
+    font-family:'Dancing Script', cursive;
+    
+}
+@keyframes text {
+    0%{
+        color:  rgb(254, 246, 246);
+    }
+    30%{
+        color: rgb(218, 178, 178);
+    }
+    60%{
+        color: rgb(131, 115, 115);
+    }
+    90%{
+        color: rgb(185, 176, 178);
+    }
+}
+
+/*.ck{
+    height: 400px;
+    width: 500px;
+    
+    margin-left: 1500px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgb(244, 18, 18,0.4 );
+border-bottom: 900px;
+   
+}*/
+
+.title, p {
+    color: rgb(16, 16, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    
+}
+h4{
+    color: aliceblue;
+    margin-top: 180px;
+    margin-left: 65px;
+}
+p{
+    font-size: 20px;
+
+}
+.sec1{
+height: 600px;
+width: 600px;
+}
+
+/* Continuous Background Image Movement */ 
+/* Flex container for h3 and cake image */
+/* Flex container for h3 and cake image */
+/* Flex container for h3 and cake image */
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; 
+}
+
+h3 {
+    height: 350px; /* Let content dictate height */
+    width: 100%; /* Adjust width for better alignment */
+    background-color: transparent;
+    color: rgb(238, 228, 228);
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0; /* No extra margin for better balance */
+    text-align: center; /* Center text inside h3 */
+    box-shadow: 0 5px 20px rgba(28, 13, 13, 0.4); /* Subtle shadow */
+    position: relative; /* For fine-tuned positioning */
+    z-index: 1; /* Make sure it's above the cake image */
+   /* top: 80px;*/
+    left: 70px;
+}
+
+.cake {
+    margin-bottom: 600px;
+    position: relative;
+   /* Moves the cake image upwards */
+    z-index: 0; /* Behind the h3 */
+    margin-left: 900px;
+
+}
+
+.ck {
+    height: 400px; /* Adjust height for better proportion */
+    width: 450px; /* Adjust width accordingly */
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(244, 18, 18, 0.4);
+    position: relative;
+    /* Moves the cake image upwards */
+    margin-bottom: 600px;
+    bottom: 380px;
+}
+
+
+.im1 {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+   animation: moveBackground 20s infinite;
+   border-radius: 30px;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+
+    100% { background-position: 30% 0; }
+}
+
+/* Second page styling */
+.imq{
+    box-shadow: 0 20px 60px rgba(100, 13, 13, 0.7);
+}
+.imw{
+    height: 500px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 30%;
+    margin-left: 25px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seclast{
+    height: 280px;
+}
+.last{
+    height: 20px;
+}
